@@ -1,0 +1,40 @@
+{
+  "name": "version-manager",
+  "version": "1.0.0",
+  "description": "version manager",
+  "main": "server/app.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "nodemon server/app",
+    "dev": "DEBUG=* nodemon server/app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dlutfrank/version-manager.git"
+  },
+  "keywords": [
+    "version manager",
+    "koa"
+  ],
+  "author": "swx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dlutfrank/version-manager/issues"
+  },
+  "homepage": "https://github.com/dlutfrank/version-manager#readme",
+  "dependencies": {
+    "debug": "^3.1.0",
+    "ejs": "^2.6.1",
+    "koa": "^2.5.1",
+    "koa-body": "^2.5.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^4.0.2",
+    "koa-views": "^6.1.4"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.1.1",
+    "nodemon": "^1.17.4",
+    "supertest": "^3.1.0"
+  }
+}
