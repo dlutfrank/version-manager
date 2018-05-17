@@ -38,13 +38,13 @@ const isDev = process.env.SERVER_ENV !== 'production';
 //
 module.exports = {
     appenders: {
-        http: {
+        response: {
             type: "dateFile",
             filename: httpLogName,
             alwaysIncludePattern: true,
             pattern: "-yyyy-MM-dd"
         },
-        server: {
+        normal: {
             type: "dateFile",
             filename: serverLogName,
             alwaysIncludePattern: true,
@@ -63,8 +63,9 @@ module.exports = {
         }
     },
     categories: {
-        default: {appenders: ["server", "error"], level: "ALL"},
-        http: {appenders: ["http", "error"], level: "ALL"},
+        default: {appenders: ["normal", "error"], level: "ALL"},
+        http: {appenders: ["response", "error"], level: "ALL"},
+        server: {appenders: ["normal", "error"], level: "ALL"},
     },
     // pm2: true,
     // pm2InstanceVar: "INSTANCE_ID"
