@@ -11,6 +11,7 @@ const {logger, httpLogger} = require('../common/koaLogger');
 
 module.exports = function init(app){
     app.config = config;
+    app.logger = logger;
     app.use(async(ctx,next)=>{
         if(!ctx.config){
             ctx.config = config;
